@@ -37,17 +37,27 @@
 			<h2>REGISTER</h2>
 			<br><br><br>
   			<div class="center">
-				<form action="http://localhost:5000/register" method="post">
+				<form>
 					<label for="name">Username:</label><br>
-						<input type="text" id="name" name="name"><br><br>
+						<input type="text" name="name" id="name" /><br><br>
+					
 					<label for="email">Email:</label><br>
-						<input type="text" id="email" name="email"><br><br>
+						<input type="email" name="email" id="email" /><br><br>
+
 					<label for="pass">Password:</label><br>
-						<input type="text" id="pass" name="pass"><br><br>
-					<input type="submit" value="Submit">
-				</form>
+						<input type="text" id="password" name="password" /><br><br>
+
+					<input type="hidden" id="request" name="request" value="/register" />
+
+					<button onclick="sendJSON()">Submit</button>
+					<!-- For printing result from server -->
+  					<p class="result" style="color:green"></p> 
+					<!-- Include the JavaScript file -->
+					<script src="../Scripts/handleForm.js"></script> 
+	  			</form>
 			</div>
 			<br><br><br><br><br><br><br><br><br><br>
+			</div>
 			<!--- To go to the Login page --->
 			<h3>Have an account? Click here!</h3>
 			<br><br><br>
