@@ -33,7 +33,7 @@ function sendJSON()
             	document.location.href = "./index.html"
             }
         } 
-        if (xhr.readyState === 4 && xhr.status === 400) 
+        if (xhr.readyState === 4 && xhr.status === 404) 
         { 
             if(request.value == "/login")
             {
