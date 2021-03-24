@@ -10,30 +10,52 @@
 			}
 			h1
 			{
-				color: #BABBB1;
-  				font-family: courier;
-  				font-size: 160%;
+				color: white;
+  				font-family: Georgia;
+  				font-size: 96px;
 				position: relative;
-  				top: 30px;
-  				text-align: center
+				margin: 0;
+			}
+			h2{
+				color: white;
+				font-family: Georgia, Arial;
+  				font-size: 21px;
+				position: relative;
+				margin: 0;
 			}
 			button
 			{
  				margin: 0;
-  				position: absolute;
-  				left: 50%;
-  				-ms-transform: translateX(-50%);
-  				transform: translateX(-50%);
-  				top: 20%;
-  				-ms-transform: translateY(-50%);
-  				transform: translateY(-50%);
+				background-image: linear-gradient(to top, white 0%, #BABBB1 100%);
+				height: 10%;
+				width: 25%;
+				font-size: 73%;
+				padding: 1%;
+			}
+			p{
+				color: white;
+				font-family: Georgia, Arial;
+				font-size: 35px;
 			}
 		</style>
 		<body>
-			<h1>UMW COMPUTER SCIENCE JOB/INTERNSHIP SITE</h1>
-  			<div class="center">
-					<!-- This links to the "login.html" file--->
-				<button type="button" onclick='document.location.href = "./login.html";'>LOGIN</button>
-			</div>
+			<h1>UMW</h1>
+			<h2>CPSC Major Opprotunities</h2>
+			<hr color="white">
+			<br><br>
+			<center><p>
+				New Here? 
+				<br><br>
+				<!-- This links to the "login.html" file--->
+				<button type="button" onclick='document.location.href = "./register.html";'>Create Account</button>
+			</p>
+			<p>
+				Already have an account? Welcome back!
+				<br>
+				<br>
+				<button type="button" onclick='document.location.href = "./login.html";'>Student Login</button> &nbsp;&nbsp;&nbsp;
+				<button type="button" onclick='document.location.href = "./login.html";'>Employee / Alumni Login</button> &nbsp;&nbsp;&nbsp;
+				<button type="button" onclick='document.location.href = "./login.html";'>Admin Login</button> 
+			</p></center>
 		</body>
 </html>
