@@ -2,38 +2,27 @@
 
 <html>
 	<head>
-	<head>
-		<style>
-			body
-			{
-				background-color: #00305e;
-			}
-			h1
-			{
-				color: #BABBB1;
-  				font-family: courier;
-  				font-size: 160%;
-				position: relative;
-  				top: 30px;
-  				text-align: center
-			}
-			button
-			{
- 				margin: 0;
-  				position: absolute;
-  				left: 50%;
-  				-ms-transform: translateX(-50%);
-  				transform: translateX(-50%);
-  				top: 20%;
-  				-ms-transform: translateY(-50%);
-  				transform: translateY(-50%);
-			}
-		</style>
+			<link rel="stylesheet" href="style.css">
+	</head>
+		
 		<body>
-			<h1>UMW COMPUTER SCIENCE JOB/INTERNSHIP SITE</h1>
-  			<div class="center">
-					<!-- This links to the "login.html" file--->
-				<button type="button" onclick='document.location.href = "./login.html";'>LOGIN</button>
+			<div class="logo">UMW</div>
+			<div class="sublogo">CPSC Major Opprotunities</div>
+			<hr color="white">
+			<br><br>
+			<center><div class="desc">
+				New Here? 
+				<br><br>
+				<!-- This links to the "login.html" file-->
+				<button class="gradBtn" onclick='document.location.href = "./register.html";'>Create Account</button>
 			</div>
+			<div class="desc">
+				Already have an account? Welcome back!
+				<br>
+				<br>
+				<button class="gradBtn" onclick='document.location.href = "./login.html";'>Student Login</button> &nbsp;&nbsp;&nbsp;
+				<button class="gradBtn" onclick='document.location.href = "./login.html";'>Employee / Alumni Login</button> &nbsp;&nbsp;&nbsp;
+				<button class="gradBtn" onclick='document.location.href = "./login.html";'>Admin Login</button> 
+			</div></center>
 		</body>
 </html>
