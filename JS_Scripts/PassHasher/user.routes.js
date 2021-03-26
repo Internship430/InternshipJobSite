@@ -59,4 +59,13 @@ module.exports = (app) => {
              // handle error
          }
      })
+
+     app.options('/register', function(req, res, next)
+     {
+       res.header('Access-Control-Allow-Origin', "*");
+       res.header('Access-Control-Allow-Methods', 'POST');
+       res.header("Access-Control-Allow-Headers", "accept, content-type");
+       res.header("Access-Control-Max-Age", "1728000");
+       return res.sendStatus(200);
+    });
  };
