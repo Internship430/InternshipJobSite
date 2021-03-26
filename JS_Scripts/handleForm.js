@@ -8,14 +8,14 @@ function sendJSON()
        
     // Creating a XHR object 
     let xhr = new XMLHttpRequest(); 
-    //let url = "http://76.78.225.94:5000/" + request.value;
     let url = "http://localhost:5000" + request.value; 
 
     // open a connection 
     xhr.open("POST", url, true); 
 
     // Set the request header i.e. which type of content you are sending 
-    xhr.setRequestHeader("Content-Type", "application/json"); 
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.setRequestHeader("Access-Control-Allow-Origin", "*"); 
 
     // Create a state change callback 
     xhr.onreadystatechange = function () 
@@ -65,4 +65,8 @@ function sendJSON()
     // Sending data with the request 
     console.log(data);
     xhr.send(data);
+
+    xhr.onload = () => {
+        console.log(xhr.responseText);
+    }
 }
