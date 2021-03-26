@@ -2,18 +2,20 @@ DROP DATABASE IF EXISTS internship;
 CREATE DATABASE  internship;
 \c internship;
 
-DROP TABLE IF EXISTS Login;
-CREATE TABLE Login (
+DROP TABLE IF EXISTS Users;
+CREATE TABLE Users (
+  #Type int NOT NULL default 1,
+  Uname text NOT NULL UNIQUE,
   Email text NOT NULL UNIQUE,
-  Type int NOT NULL default 1,
-  Fname text  NOT NULL default '',
-  Lname text NOT NULL default '',
-  Password char(64) NOT NULL,
+  #Fname text  NOT NULL default '',
+  #Lname text NOT NULL default '',
+  Password text NOT NULL default '',
   Company text, 
   GradTerm text, 
-  PRIMARY KEY  (email)
+  PRIMARY KEY  (Uname)
 );
-INSERT INTO login(Email,Type, Password) VALUES ('admin',0,'8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918');
+
+#INSERT INTO Users(Type, Uname, Email, Fname, Lname, Password) VALUES (0,'admin','JenniferPolack@gmail.com','admin','admin', '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918');
 
 DROP TABLE IF EXISTS postings;
 CREATE TABLE postings (

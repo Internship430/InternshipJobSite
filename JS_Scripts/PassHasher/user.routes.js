@@ -7,7 +7,54 @@ module.exports = (app) => {
 
      app.post('/register', async (req, res) => 
      {
-         try {
+        let user = new User(
+        {
+            name: req.body.name,
+            email: req.body.email,
+            password: await hash(req.body.password)
+        })
+
+        try
+        {
+            if(name == undefined || email == undefined || password == undefined)
+            {
+                console.error("Error: Parameters not given");
+                res.json({status: "Error: Parameters not given"});
+            }
+            else
+            {
+                const template = "SELECT Uname FROM Users WHERE Uname = $1";
+                const response = await pool.query(template, [name]);
+
+                if(response.rowCount != 0)
+                {
+                    console.error('username taken');
+                    res.json({status:'username taken'});
+                }
+                else
+                {
+                    const template = "INSERT INTO Users (name, email, password) VALUES ($1, $2, $3)";
+                    const response = await pool.query(template, [name, email, password])
+                    console.error('user added');
+                    res.json({status: "user added"});
+                }
+            }
+        }
+        catch(err)
+        {
+            console.error("Error running query " + err);
+            res.json({status: "Error running query " + err});
+        }
+
+
+
+
+
+
+
+
+
+         /*try {
              let user = new User(
              {
                  name: req.body.name,
@@ -23,7 +70,7 @@ module.exports = (app) => {
              })
          } catch (err) {
              //handle error
-         }
+         }*/
      });
 
      app.post('/login', async (req, res) => 
@@ -60,12 +107,5 @@ module.exports = (app) => {
          }
      })
 
-     app.options('/register', function(req, res, next)
-     {
-       res.header('Access-Control-Allow-Origin', "*");
-       res.header('Access-Control-Allow-Methods', 'POST');
-       res.header("Access-Control-Allow-Headers", "accept, content-type");
-       res.header("Access-Control-Max-Age", "1728000");
-       return res.sendStatus(200);
-    });
+     
  };
