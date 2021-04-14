@@ -9,6 +9,12 @@
 <html>
 	<head>
         <style>
+			table, th, td {
+  				border: 1px solid black;
+				color: white;
+  				font-family: Georgia, Arial;
+				text-align:center
+			}
 			body
 			{
 				background-color: #00305e;
@@ -44,6 +50,21 @@
         <h1>Reports</h1>
         <br><br><br>
         <div class="center">
+			<table style="width:100%">
+				<tr>
+					<th>Reported Review</th>
+					<th>Student Name</th>
+					<th>Approve or Remove</th>
+				</tr>
+				<tr>
+					<td>Have the review here</td>
+					<td>Name of student here</td>
+					<td> 
+						<!--- approve / remove button here-->
+					</td>
+				</tr>
+			</table>
+			<br><br><br>
             <!-- This links to the "dashboard" file in this folder--->
             <button type="button" onclick='document.location.href = "./dashboard.html";'>Dashboard</button>
         </div>

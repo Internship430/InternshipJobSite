@@ -7,6 +7,12 @@
 <html>
 	<head>
         <style>
+			table, th, td {
+  				border: 1px solid black;
+				color: white;
+  				font-family: Georgia, Arial;
+				text-align:center
+			}
 			body
 			{
 				background-color: #00305e;
@@ -23,25 +29,42 @@
 			button
 			{
  				margin: 0;
-  				position: absolute;
+  				position: absolute; 
   				left: 50%;
   				-ms-transform: translateX(-50%);
   				transform: translateX(-50%);
   				-ms-transform: translateY(-50%);
   				transform: translateY(-50%);
-        color:#686663;
-        text-decoration: none;
-        font-family: 'Arial',Arial;
-        font-size: 14.0pt;
-        font-style: normal;
-        font-weight: 400;
+      		  color:#686663;
+      		  text-decoration: none;
+      		  font-family: 'Arial',Arial;
+       		 font-size: 14.0pt;
+     		   font-style: normal;
+     		   font-weight: 400;
             }
 		</style>
     </head>
     <body>
         <h1>Pending Listings</h1>
-        <br><br><br>
+		<br><br><br>
         <div class="center">
+			<table style="width:100%">
+				<tr>
+					<th>Description</th>
+					<th>Company</th>
+					<th>Position</th>
+					<th>Approve / Deny</th>
+				</tr>
+				<tr>
+					<td>describe the company here</td>
+					<td>company name here</td>
+					<td>position here</td>
+					<td> 
+						<!--- approve / deny button here-->
+					</td>
+				</tr>
+			</table>
+			<br><br><br>
             <!-- This links to the "dashboard" file in this folder--->
             <button type="button" onclick='document.location.href = "./dashboard.html";'>Dashboard</button>
         </div>
