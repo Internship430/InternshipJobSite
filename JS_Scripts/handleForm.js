@@ -9,7 +9,7 @@ function sendJSON()
     // Creating a XHR object 
     let xhr = new XMLHttpRequest(); 
     //let url = "http://localhost:5000" + request.value; 
-    let url = "http://76.78.225.94:5000" + request.value; 
+    let url = "http://localhost:5000" + request.value; 
 
     // open a connection 
     xhr.open("POST", url, true); 

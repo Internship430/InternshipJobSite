@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
+const port = process.env.PORT || 5000;
 
 app.set("port", 8080);
 app.use(bodyParser.json({ type: "application/json" }));
@@ -31,4 +32,4 @@ app.listen(port, () => {
     console.log('App is Running on port', port)
 });
 
-require('./user.routes')(app);
+require('./PassHasher/user.routes')(app);
