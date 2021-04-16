@@ -7,8 +7,9 @@ export default function Home(props)
 {
   	return 
   	(
+  		<div class="index">
   		<div class="logo">UMW</div>
-			<div class="sublogo">CPSC Major Opprotunities</div>
+  		<div class="sublogo">CPSC Major Opprotunities</div>
 			<hr color="white">
 			<br><br>
 			<center><div class="desc">
@@ -25,5 +26,6 @@ export default function Home(props)
 				<button class="gradBtn" onclick='document.location.href = "./login.html";'>Employee / Alumni Login</button> &nbsp;&nbsp;&nbsp;
 				<button class="gradBtn" onclick='document.location.href = "./login.html";'>Admin Login</button> 
 		</div></center>
+		</div>
 	);
 }
