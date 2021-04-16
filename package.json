@@ -2,12 +2,12 @@
   "name": "Internship430",
   "version": "1.0.0",
   "main": "index.js",
-"scripts": {
-  "dev": "next",
-  "build": "next build",
-  "start": "next start"
-},  
-"keywords": [],
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "repository": {

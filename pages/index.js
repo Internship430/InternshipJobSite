@@ -1,27 +1,27 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
-import { makeStyles } from '@material-ui/core/styles';
-import '../Pages/style.css'
+//import Button from '@material-ui/core/Button';
+//import { makeStyles } from '@material-ui/core/styles';
+//import '../pages/style.css'
 
 export default function Home(props) 
 {
   	return 
   	(
-  		<div class="index">
-  		<div class="logo">UMW</div>
-  		<div class="sublogo">CPSC Major Opprotunities</div>
-			<hr color="white">
-			<br><br>
-			<center><div class="desc">
+  		<div className="index">
+  		<div className="logo">UMW</div>
+  		<div className="sublogo">CPSC Major Opprotunities</div>
+			<hr color="white" />
+			<br /><br />
+			<center><div className="desc">
 				New Here? 
-				<br><br>
-				<!-- This links to the "login.html" file-->
+				<br /><br />
+				//This links to the "login.html" file
 				<button class="gradBtn" onclick='document.location.href = "./register.html";'>Create Account</button>
 			</div>
-			<div class="desc">
+			<div className="desc">
 				Already have an account? Welcome back!
-				<br>
-				<br>
+				<br />
+				<br />
 				<button class="gradBtn" onclick='document.location.href = "./login.html";'>Student Login</button> &nbsp;&nbsp;&nbsp;
 				<button class="gradBtn" onclick='document.location.href = "./login.html";'>Employee / Alumni Login</button> &nbsp;&nbsp;&nbsp;
 				<button class="gradBtn" onclick='document.location.href = "./login.html";'>Admin Login</button> 
