@@ -3,11 +3,10 @@ import React from 'react';
 //import { makeStyles } from '@material-ui/core/styles';
 //import '../pages/style.css'
 
-export default function Home(props) 
+/*export default function Home(props) 
 {
-  	return 
-  	(
-  		<div className="index">
+  	return(
+		<div className="index">
   		<div className="logo">UMW</div>
   		<div className="sublogo">CPSC Major Opprotunities</div>
 			<hr color="white" />
@@ -28,4 +27,18 @@ export default function Home(props)
 		</div></center>
 		</div>
 	);
-}
+}*/
+
+var http = require('http'),
+    fs = require('fs');
+
+fs.readFile('./html_Pages/index.html', function (err, html) {
+    if (err) {
+        throw err; 
+    }       
+    http.createServer(function(request, response) {  
+        response.writeHeader(200, {"Content-Type": "text/html"});  
+        response.write(html);  
+        response.end();  
+    }).listen(8000);
+});

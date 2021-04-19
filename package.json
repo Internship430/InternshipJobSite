@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "type": "module"
   },
   "keywords": [],
   "author": "",
@@ -21,7 +22,9 @@
   "description": "",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "esm": "^3.2.25",
     "express": "^4.17.1",
+    "fs": "*",
     "mongoose": "^5.12.1",
     "morgan": "^1.10.0",
     "nex": "^2.0.22",
@@ -29,6 +32,5 @@
     "pg": "^8.5.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
-  },
-  "devDependencies": {}
+  }
 }

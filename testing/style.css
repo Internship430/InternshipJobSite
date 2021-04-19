@@ -1,0 +1,49 @@
+body
+{
+    background-color: #00305e;
+}
+.logo
+{
+    color: white;
+    font-family: Georgia;
+    font-size: 96px;
+    position: relative;
+    margin: 0;
+}
+.sublogo
+{
+    color: white;
+    font-family: Georgia, Arial;
+    font-size: 21px;
+    position: relative;
+    margin: 0;
+}
+.gradBtn /* gradient button */
+{
+    margin: 0;
+    background-image: linear-gradient(to top, white 0%, #BABBB1 100%);
+    height: 10%;
+    width: 25%;
+    font-size: 73%;
+    padding: 1%;
+}
+.desc /* description text */
+{
+    color: white;
+    font-family: Georgia, Arial;
+    font-size: 35px;
+}
+
+body
+{
+    background-color: #00305e;
+}
+h1
+{
+    color: #BABBB1;
+    font-family: courier;
+    font-size: 160%;
+    position: relative;
+    top: 30px;
+    text-align: center
+}
