@@ -15,12 +15,10 @@ function createServer(req, res) {
             throw error;
         } 
         
-
         res.writeHead(200);
         res.write(data);
         res.end();
     }
-    //THING 1 from test.js was here
    
     if(path == "/" || path == ""){
         path = "/index.html"
@@ -28,5 +26,3 @@ function createServer(req, res) {
     doc = fs.readFile(__dirname + path, fsCallback);
 }
 app.listen(8000);
-
-//THING 2 from test.js was here
