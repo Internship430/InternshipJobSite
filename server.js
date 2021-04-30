@@ -68,8 +68,7 @@ function createServer(req, res) {
         path = path.slice(0,quest); //removes everything after question mark
     }
 
-    //if (js == -1){ //checks path a is not javascript file
-    if(path.includes(".html")||path.includes(".css")){
+    if(path.includes(".html")||path.includes(".css")){ //checks path a is not javascript file
         path = "/html_Pages" + path; //looking in html_Pages dir for html file
         doc = fs.readFile(__dirname + path, fsCallback);
     } else if(path.includes(".js")) {
