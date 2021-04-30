@@ -26,7 +26,7 @@
   				top: 30px;
   				text-align: center
 			}
-			button
+			.butt
 			{
  				margin: 0;
   				position: absolute; 
@@ -61,12 +61,17 @@
 					<td>position here</td>
 					<td> 
 						<!--- approve / deny button here-->
+						<script>
+							//each button will do Function(approve) or Function(deny)
+						</script>
+						<button type="button">approve</button><br>
+						<button type = "button">deny</button>
 					</td>
 				</tr>
 			</table>
 			<br><br><br>
             <!-- This links to the "dashboard" file in this folder--->
-            <button type="button" onclick='document.location.href = "./dashboard.html";'>Dashboard</button>
+            <button class="butt" onclick='document.location.href = "./dashboard.html";'>Dashboard</button>
         </div>
     </body>
 </html>

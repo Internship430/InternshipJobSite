@@ -1,13 +1,9 @@
 
 <DOCTYPE! html>
 
-<!---
-    TODO
-    This is just a dummy page to see if the link works
--->
-
 <html>
 	<head>
+		<script type="text/javascript" src="../test2.js"></script>
         <style>
 			table, th, td {
   				border: 1px solid black;
@@ -28,7 +24,7 @@
   				top: 30px;
   				text-align: center
 			}
-			button
+			.butt
 			{
  				margin: 0;
   				position: absolute;
@@ -37,15 +33,16 @@
   				transform: translateX(-50%);
   				-ms-transform: translateY(-50%);
   				transform: translateY(-50%);
-        color:#686663;
-        text-decoration: none;
-        font-family: 'Arial',Arial;
-        font-size: 14.0pt;
-        font-style: normal;
-        font-weight: 400;
+        		color:#686663;
+				text-decoration: none;
+				font-family: 'Arial',Arial;
+				font-size: 14.0pt;
+				font-style: normal;
+				font-weight: 400;
             }
 		</style>
     </head>
+
     <body>
         <h1>Reports</h1>
         <br><br><br>
@@ -61,12 +58,21 @@
 					<td>Name of student here</td>
 					<td> 
 						<!--- approve / remove button here-->
+						<script>
+							//each button will do Function(approve) or Function(deny)
+						</script>
+						<button type="button">approve</button><br>
+						<button type = "button">deny</button>
 					</td>
+				</tr>
+				<tr>
+					<!--create table here -->
+					<script>selectQuery("*","Reports","");</script>
 				</tr>
 			</table>
 			<br><br><br>
             <!-- This links to the "dashboard" file in this folder--->
-            <button type="button" onclick='document.location.href = "./dashboard.html";'>Dashboard</button>
-        </div>
+			<button class="butt" onclick='document.location.href = "./dashboard.html";'>Dashboard</button>
+		</div>
     </body>
 </html>
