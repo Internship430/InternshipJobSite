@@ -19,7 +19,7 @@ function createServer(req, res) {
             throw error;
         } else {
         
-            res.writeHead(200); //returns connection is good
+		res.writeHead(200, {'Content-Type': 'text/html'});
             res.write(data);
             res.end();
         }
