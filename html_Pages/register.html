@@ -39,7 +39,7 @@
 			<h2>REGISTER</h2>
 			<br><br><br>
   			<div class="center">
-				<form>
+				<form action="/register" method="POST">
 					<label for="name">Username:</label><br>
 						<input type="text" name="name" id="name" /><br><br>
 					
@@ -49,12 +49,14 @@
 					<label for="pass">Password:</label><br>
 						<input type="text" id="password" name="password" /><br><br>
 
-					<input type="hidden" id="request" name="request" value="/register" />
+					<!--<input type="hidden" id="request" name="request" value="/register" /> -->
 
-					<button onclick="sendJSON()">Submit</button>
+					<input type="submit" value="Submit">
+
+					<!--<button onclick="sendJSON()">Submit</button> -->
 					<!-- For printing result from server -->
 					<!-- Include the JavaScript file -->
-					<script src="../JS_Scripts/handleForm.js"></script>
+					<!--<script src="../JS_Scripts/handleForm.js"></script> -->
 	  			</form>
 			</div>
 			<br><br><br><br><br><br><br><br><br><br>
