@@ -8,7 +8,7 @@ var site = require('http').createServer(createServer);
 /* sql connection */
 const bodyParser = require("body-parser");
 const app = express();
-const port = process.env.PORT || 8001;
+//const port = process.env.PORT || 8001;
 app.use(bodyParser.json({ type: "application/json" }));
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -19,6 +19,8 @@ const config = {
 	password: "430Admin",
 	database: "internship"
 };
+
+app.set("port", 8080);
 
 const pool = new Pool(config);  //database
 
@@ -123,5 +125,8 @@ function createServer(req, res) {
         res.writeHead(204).end;
     }
 }
-site.listen(8000);
-app.listen(8001);
+//site.listen(8000);
+app.listen(app.get("port"), () => {
+    console.log(`Find the server at: http://localhost:${app.get("port")}/`);
+     // eslint-disable-line no-console
+});
