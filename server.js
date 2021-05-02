@@ -8,7 +8,7 @@ var site = require('http').createServer(createServer);
 /* sql connection */
 const bodyParser = require("body-parser");
 const app = express();
-//const port = process.env.PORT || 8000;
+const port = process.env.PORT || 8001;
 app.use(bodyParser.json({ type: "application/json" }));
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -124,3 +124,4 @@ function createServer(req, res) {
     }
 }
 site.listen(8000);
+app.listen(8001);
